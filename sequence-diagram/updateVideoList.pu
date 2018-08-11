@@ -1,0 +1,19 @@
+@startuml updateVideoList
+autonumber
+
+App -> DOM: VideoListの有無を確認
+DOM --> App: 有無を回答
+
+alt VideoListが存在する場合
+    App -> DOM: emptyVideoList()
+end
+
+App -> NXB_API: getVideo(tag)
+NXB_API ---> App: success
+
+alt getVideo(tag)に成功した場合
+    App -> DOM: createVideoList()
+else getVideo()に失敗した場合
+    App -> DOM: 失敗したと表示
+end
+@enduml

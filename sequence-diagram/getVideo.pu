@@ -1,0 +1,12 @@
+@startuml getVideo
+autonumber
+
+App -> App: NXB_APIのURLを設定
+
+alt 引数tagが存在する場合
+    App -> App: NXB_APIのURLにパラメータtagを付与
+end
+
+App -> NXB_API: NXB_APIをコール
+NXB_API -> App: json形式でビデオ情報を取得
+@enduml
