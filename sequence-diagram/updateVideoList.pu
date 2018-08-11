@@ -1,4 +1,4 @@
-@startuml updateVideoList
+@startuml updateVideoList()
 autonumber
 
 App -> DOM: VideoListの有無を確認

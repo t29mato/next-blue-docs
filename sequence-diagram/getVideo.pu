@@ -1,4 +1,4 @@
-@startuml getVideo
+@startuml getVideo()
 autonumber
 
 App -> App: NXB_APIのURLを設定
